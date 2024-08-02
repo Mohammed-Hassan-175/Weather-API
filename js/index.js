@@ -32,12 +32,13 @@ var day2 = document.getElementsByClassName('day2'),
 //
 async function getweather() {
 
-    apiResponse = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=28b5629057b647f6a02104320243003&q=${currentCity}&days=3`)
+    apiResponse = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=28b5629057b647f6a02104320243003&q=${currentCity}&days=3`)
     responseData = await apiResponse.json();
     currentDay();
     nextDay();
     getCoordintes()
 }
+
 
 getweather();
 
